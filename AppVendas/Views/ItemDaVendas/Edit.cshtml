@@ -1,4 +1,4 @@
-﻿@model AppVendas.Models.ItemDaVenda
+﻿﻿@model AppVendas.Models.ItemDaVenda
 
 @{
     ViewData["Title"] = "Edit";
@@ -24,14 +24,14 @@
                 <span asp-validation-for="ProdutoId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="QtadeEstoque" class="control-label"></label>
-                <input asp-for="QtadeEstoque" class="form-control" />
-                <span asp-validation-for="QtadeEstoque" class="text-danger"></span>
+                <label asp-for="QtdadeVendida" class="control-label"></label>
+                <input asp-for="QtdadeVendida" class="form-control" />
+                <span asp-validation-for="QtdadeVendida" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ValorTotal" class="control-label"></label>
-                <input asp-for="ValorTotal" class="form-control" />
-                <span asp-validation-for="ValorTotal" class="text-danger"></span>
+                <label asp-for="ValorTotalDoItem" class="control-label"></label>
+                <input asp-for="ValorTotalDoItem" class="form-control" />
+                <span asp-validation-for="ValorTotalDoItem" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -45,5 +45,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

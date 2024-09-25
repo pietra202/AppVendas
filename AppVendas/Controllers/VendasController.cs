@@ -12,9 +12,9 @@ namespace AppVendas.Controllers
 {
     public class VendasController : Controller
     {
-        private readonly ApplicationDdContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public VendasController(ApplicationDdContext context)
+        public VendasController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -22,8 +22,8 @@ namespace AppVendas.Controllers
         // GET: Vendas
         public async Task<IActionResult> Index()
         {
-            var applicationDdContext = _context.Vendas.Include(v => v.Cliente);
-            return View(await applicationDdContext.ToListAsync());
+            var applicationDbContext = _context.Vendas.Include(v => v.Cliente);
+            return View(await applicationDbContext.ToListAsync());
         }
 
         // GET: Vendas/Details/5
