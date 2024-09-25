@@ -30,11 +30,13 @@
                         @Html.DisplayFor(modelItem => item.CategoriaNome)
                     </td>
                     <td>
-                        <a asp-action="Edit" asp-route-id="@item.CategoriaId">
-                            <ion-icon name="brush-outline"></ion-icon>Editar
+                        <a asp-action="Edit" asp-route-id="@item.CategoriaId" class="btn btn-outline-secondary align-items-center">
+                            <ion-icon name="brush-create"></ion-icon>Editar
                         </a>
 
-                        <a asp-action="Delete" asp-route-id="@item.CategoriaId">Excluir</a>
+                        <a asp-action="Delete" asp-route-id="@item.CategoriaId" class="btn btn-outline-secondary align-items-center ms-2"></a>
+                        <ion-icon name="close"></ion-icon>Excluir
+
                     </td>
                 </tr>
             }
